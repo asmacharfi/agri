@@ -1,0 +1,162 @@
+// filter-page.component.scss
+$filter-bg: #f8f9fa; // Background color for filter sections
+$button-bg: #007bff; // Background color for buttons
+$button-color: white; // Text color for buttons
+$border-color: #dee2e6; // Border color for inputs and buttons
+$input-height: 38px; // Standard input height
+
+.filter-container {
+    background-color: $filter-bg;
+    border-radius: 4px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    max-width: 1000px; // or 100% for full width
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); // two columns
+    grid-template-rows: repeat(2, 1fr); // two rows
+    gap: 20px; // space between grid items
+
+    .filter-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 15px;
+
+        .filter-controls {
+            text-align: right;
+        }
+
+        .filter-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .filter-category {
+            background: white;
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-height: 300px; // example height, adjust as needed
+            overflow-y: auto; // for scrollable lists in each category
+            border: 1px solid #ccc; // border color as per the image
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // soft shadow for depth
+            padding: 15px;
+
+            h3 {
+                color: #333;
+                font-size: 1.2em;
+                margin-bottom: 10px;
+            }
+
+            input[type="text"] {
+                width: 100%;
+                padding: 0.375rem 0.75rem;
+                height: $input-height;
+                border: 1px solid $border-color;
+                border-radius: 0.25rem;
+                margin-bottom: 1rem;
+            }
+
+            button {
+                display: inline-block;
+                font-weight: 400;
+                color: $button-color;
+                text-align: center;
+                vertical-align: middle;
+                user-select: none;
+                background-color: $button-bg;
+                border: 1px solid $button-bg;
+                padding: 0.375rem 0.75rem;
+                font-size: 1rem;
+                line-height: 1.5;
+                border-radius: 0.25rem;
+                margin-right: 5px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: darken($button-bg, 7.5%);
+                    border-color: darken($button-bg, 10%);
+                }
+            }
+
+            .checkbox-container {
+                display: flex;
+                align-items: center;
+
+                input[type="checkbox"] {
+                    margin-right: 5px;
+                }
+            }
+
+            .countries-list-container {
+                max-height: 200px; // Set a fixed height that works for your design
+                overflow-y: auto;
+                border: 1px solid #dee2e6; // For a nice border around the scrollable area
+                border-radius: 4px;
+            }
+
+            .search-box {
+                margin-bottom: 10px; // space below the search box
+            }
+        }
+    }
+
+    .output-options {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        button {
+            background-color: $button-bg;
+            color: $button-color;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: darken($button-bg, 7.5%);
+            }
+        }
+    }
+}
+
+.data-display-area {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex; // Use Flexbox for alignment
+    justify-content: center; // Center horizontally
+    align-items: center; // Center vertically
+    height: 400px; // Set a fixed height for the container
+    margin-top: 20px; // Space from the filters above
+    padding: 20px; // Inner spacing
+    text-align: center; // Center the text within the message box
+    background-color: white;
+
+    .data-message {
+        h2 {
+            font-size: 1.5em; // Large text for the header
+            margin-bottom: 0.5em; // Space below the header
+
+        }
+
+        p {
+            font-size: 1em; // Standard text size for the paragraph
+        }
+
+        // Style for the Show Data text to make it look like a button or link
+        strong {
+            cursor: pointer;
+            color: #007bff; // Bootstrap primary blue color
+
+            &:hover {
+                text-decoration: underline; // Underline on hover to indicate interactivity
+            }
+        }
+    }
+}
+.header{
+    background-color: #416D19;
+  }
+    

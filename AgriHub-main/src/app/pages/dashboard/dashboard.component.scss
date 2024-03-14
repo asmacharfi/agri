@@ -1,0 +1,48 @@
+.dashboard-header {
+    position: relative;
+    height: 500px; 
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+  }
+
+  h1{
+    color: white;
+  }
+  
+  .header-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 100px;
+    height: 500px;
+    width: 100%;
+  }
+  
+  .action-buttons button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .dashboard-header {
+      height: 200px;
+    }
+  
+    .header-content {
+      padding: 10px;
+    }
+  
+    .action-buttons button {
+      padding: 5px 10px;
+      font-size: 14px;
+    }
+  }
+  

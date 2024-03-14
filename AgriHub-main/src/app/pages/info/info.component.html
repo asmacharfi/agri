@@ -1,0 +1,48 @@
+<div class="header pb-8 pt-5 pt-md-8">
+  <div class="container-fluid">
+    <div class="header-body">
+    </div>
+  </div>
+</div>
+<!-- Page content -->
+<div class="container-fluid mt--7">
+  <!-- Table -->
+  <div class="row">
+    <div class="col">
+      <div class="card shadow">
+        <div class="card-header bg-transparent">
+          <h3 class="mb-0">Data</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6 info-container">
+              <ng-container *ngFor="let section of sectionsCombined">
+                <details open>
+                  <summary>
+                    <i [class]="section.icon"></i>
+                    <span>{{ section.title }}</span>
+                  </summary>
+                  <ng-container *ngFor="let subsection of section.subsections">
+                    <details *ngIf="subsection.title">
+                      <summary>{{ subsection.title }}</summary>
+                      <ul>
+                        <li *ngFor="let item of subsection.content">
+                          <a [routerLink]="getUrlForItem(item)" >{{ item.name }}</a>
+                          <span *ngIf="item.revision" class="updated-date">{{ item.revision }}</span>
+                        </li>
+                      </ul>
+                    </details>
+                    <ul *ngIf="!subsection.title">
+                      <li *ngFor="let item of subsection.content">
+                        <a [routerLink]="getUrlForItem(item)">{{ item.name }}</a>
+                        <span *ngIf="item.revision" class="updated-date">{{ item.revision }}</span>
+                      </li>
+                    </ul>
+                  </ng-container>
+                </details>
+              </ng-container>
+            </div>
+            
+
+          </div>
+        </div>
