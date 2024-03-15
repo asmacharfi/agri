@@ -1,0 +1,41 @@
+.info-container {
+    details {
+      margin: 10px 0;
+      padding: 10px;
+      background-color: #f9f9f9;
+  
+      summary {
+        font-weight: bold;
+        cursor: pointer;
+  
+        &:hover {
+          color: #0056b3;
+        }
+  
+        .updated-date {
+          float: right;
+          font-weight: normal;
+          font-style: italic;
+        }
+      }
+  
+      ul {
+        margin-top: 10px;
+        list-style-type: none;
+        padding: 0;
+        
+        li {
+          padding: 5px 0;
+          cursor: pointer;
+  
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+.header{
+  background-color: #416D19;
+}
+  
